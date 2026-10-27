@@ -1,0 +1,36 @@
+[telegram]
+bot_token = ""
+chat_id = ""
+
+[solana]
+rpc_url = "https://api.mainnet-beta.solana.com"
+extra_excluded_owners = []
+
+[scanner]
+poll_seconds = 30
+watch_minutes = 120
+safety_recheck_seconds = 300
+db_path = "alerts.db"
+state_path = "state.json"
+
+[ai]
+enabled = true
+model = "claude-haiku-5-5"
+max_searches = 3
+
+[filters]
+min_liquidity_usd = 15000
+min_market_cap_usd = 30000
+max_market_cap_usd = 5000000
+min_liquidity_to_mcap = 0.05
+max_pair_age_hours = 24
+min_volume_1h_usd = 20000
+min_buys_5m = 15
+min_buy_sell_ratio_5m = 1.0
+require_socials = true
+require_mint_revoked = true
+require_freeze_revoked = true
+max_top10_holders_pct = 30
+max_single_holder_pct = 10
+reject_rugcheck_danger = true
+require_rugcheck = false
