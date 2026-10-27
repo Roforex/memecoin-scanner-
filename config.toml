@@ -8,7 +8,7 @@ extra_excluded_owners = []
 
 [scanner]
 poll_seconds = 30
-watch_minutes = 120
+watch_minutes = 360
 safety_recheck_seconds = 300
 db_path = "alerts.db"
 state_path = "state.json"
@@ -19,13 +19,14 @@ model = "claude-haiku-5-5"
 max_searches = 3
 
 [filters]
-min_liquidity_usd = 15000
-min_market_cap_usd = 30000
-max_market_cap_usd = 5000000
+min_liquidity_usd = 50000
+min_market_cap_usd = 100000
+max_market_cap_usd = 10000000
 min_liquidity_to_mcap = 0.05
+min_pair_age_hours = 1
 max_pair_age_hours = 24
-min_volume_1h_usd = 20000
-min_buys_5m = 15
+min_volume_1h_usd = 50000
+min_buys_5m = 20
 min_buy_sell_ratio_5m = 1.0
 require_socials = true
 require_mint_revoked = true
