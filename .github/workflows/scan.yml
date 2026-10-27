@@ -61,5 +61,5 @@ jobs:
       - name: How past alerts did
         run: |
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-          python bot.py --report >> "$GITHUB_STEP_SUMMARY"
+          python run.py --report >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
