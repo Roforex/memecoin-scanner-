@@ -35,3 +35,5 @@ max_top10_holders_pct = 30
 max_single_holder_pct = 10
 reject_rugcheck_danger = true
 require_rugcheck = false
+[paper]
+stop_loss_pct = 10
