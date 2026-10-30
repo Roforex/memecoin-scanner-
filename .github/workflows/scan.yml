@@ -27,7 +27,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Scan
-        run: python run.py --once
+                run: python dip.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -61,5 +61,5 @@ jobs:
       - name: How past alerts did
         run: |
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-          python run.py --report >> "$GITHUB_STEP_SUMMARY"
+          python dip.py --report >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
